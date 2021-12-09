@@ -27,16 +27,15 @@ Book.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    img: {
-      type: DataTypes.BLOB,
+    img_url: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     synopsis: {
       type: DataTypes.STRING,
-   allowNull: false,
-      },
+      allowNull: false,
     },
-
+    },
 
   {
     sequelize,
