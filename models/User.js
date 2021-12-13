@@ -25,7 +25,7 @@ User.init(
       allowNull: false,
     },
     dob: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     email: {

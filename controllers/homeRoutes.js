@@ -3,38 +3,26 @@ const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-  try {
-    if(req.session.logged_in){
-      res.render('book', { 
-        logged_in: req.session.logged_in 
-       });
-    }else{
-      res.render('homepage', { 
-        logged_in: req.session.logged_in 
-       });
-
-    }
-    
-  } catch (err) {
-    res.status(500).json(err);
-  }
+  res.render('homepage', {
+    logged_in: req.session.logged_in,
+  });
 });
 
-router.get('/project/:id', async (req, res) => {
+router.get('/book/:id', async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id, {
+    const bookData = await Book.findByPk(req.params.id, {
       include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
+        // {
+        //   model: Book,
+        //   attributes: ['name', 'author', 'year', 'date_posted', 'synopsis'],
+        // },
       ],
     });
 
-    const project = projectData.get({ plain: true });
-
-    res.render('project', {
-      ...project,
+    const book = bookData.get({ plain: true });
+    
+    res.render('book', {
+      ...book,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -43,18 +31,18 @@ router.get('/project/:id', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/book', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
-    });
+    // // Find the logged in user based on the session ID
+    // const userData = await User.findByPk(req.session.user_id, {
+    //   attributes: { exclude: ['password'] },
+    //   include: [{ model: Book }],
+    // });
 
-    const user = userData.get({ plain: true });
-
-    res.render('profile', {
-      ...user,
+    // const user = userData.get({ plain: true });
+    // console.log(user)
+    res.render('book', {
+      // ...user,
       logged_in: true
     });
   } catch (err) {
