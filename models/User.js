@@ -40,7 +40,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    user_password: {
+    password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
