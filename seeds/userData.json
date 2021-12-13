@@ -1,10 +1,11 @@
 [
   {
+    "user_id": 1,
     "fname": "Sal",
     "lname": "Wilson",
     "dob": "27/11/1981",
     "email": "sal@hotmail.com",
-    "user_password": "password12345",
+    "password": "password12345",
     "user_name": "SalW"
   }
 ]

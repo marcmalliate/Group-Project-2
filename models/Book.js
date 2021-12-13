@@ -23,16 +23,16 @@ Book.init(
       type: DataTypes.INTEGER,
     },
     date_posted: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    img_url: {
       type: DataTypes.STRING,
       allowNull: false,
+      // defaultValue: DataTypes.NOW,
     },
+    // img_url: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
     synopsis: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     },
