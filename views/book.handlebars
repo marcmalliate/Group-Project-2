@@ -4,8 +4,11 @@
 <p>Publishing Year: {{book.year}}</p>
 <p>Date Posted: {{book.date_posted}}</p>
 <p>Synopsis: {{book.synopsis}}</p>
+
 {{#each book.reviews as | review |}}
 
-<p>{{review.review_text}}</p>
+<p>{{review.review_text}} {{user.name}}</p>
+
 
 {{/each}}
+
