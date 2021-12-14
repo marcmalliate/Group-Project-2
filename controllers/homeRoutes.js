@@ -35,11 +35,16 @@ router.get('/book', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const bookData = await Book.findByPk(1, {
-      // include: [{ model: Book }], Change to reviews
+      include: [
+        {
+        model: Review,
+        }
+      ]
     });
 
     const book = bookData.get({ plain: true });
-    // console.log(book)
+
+    console.log(book)
     res.render('book', {
       book,
       logged_in: true
@@ -47,6 +52,8 @@ router.get('/book', withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+
+  
 });
 
 router.get('/review', withAuth, async (req, res) => {
