@@ -4,7 +4,7 @@
       "user_id": 1,
       "book_id": 1,
       "review_text": "The book is really good!",
-      "rating": 4,
+      "rating": "4/5",
       "reviewed_date": "13/12/2021"
     },
     {
@@ -12,7 +12,7 @@
       "user_id": 2,
       "book_id": 1,
       "review_text": "The book was definitely better!",
-      "rating": 5,
+      "rating": "5/5",
       "reviewed_date": "15/12/2021"
     },
     {
@@ -20,7 +20,7 @@
       "user_id": 3,
       "book_id": 1,
       "review_text": "Too much sand for me! Would have preferred Titanic",
-      "rating": 1,
+      "rating": "1/5",
       "reviewed_date": "20/12/2021"
     },
     {
@@ -28,7 +28,7 @@
       "user_id": 4,
       "book_id": 1,
       "review_text": "Loved the juxtaposition of themes and the struggle portrayed by the protagonist",
-      "rating": 4,
+      "rating": "4/5",
       "reviewed_date": "27/12/2021"
     },
     {
@@ -36,7 +36,7 @@
       "user_id": 5,
       "book_id": 1,
       "review_text": "Meh",
-      "rating": 3,
+      "rating": "3/5",
       "reviewed_date": "22/12/2021"
     },
     {
@@ -44,7 +44,7 @@
       "user_id": 6,
       "book_id": 1,
       "review_text": "I loved all the sand!",
-      "rating": 4,
+      "rating": "4/5",
       "reviewed_date": "17/12/2021"
     }
     
