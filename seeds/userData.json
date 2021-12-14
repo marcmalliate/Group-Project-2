@@ -1,11 +1,57 @@
 [
   {
     "user_id": 1,
-    "fname": "Sal",
-    "lname": "Wilson",
-    "dob": "27/11/1981",
-    "email": "sal@hotmail.com",
-    "password": "password12345",
-    "user_name": "SalW"
+    "fname": "Ajay",
+    "lname": "Kulkarni",
+    "dob": "27/12/1992",
+    "email": "ajayk@hotmail.com",
+    "password": "iamasuperstar44",
+    "user_name": "AjayK"
+  },
+  {
+    "user_id": 2,
+    "fname": "Madeleine",
+    "lname": "Cosway",
+    "dob": "13/10/1991",
+    "email": "madcosway@hotmail.com",
+    "password": "iamamazing78",
+    "user_name": "MadCosway"
+  },
+  {
+    "user_id": 3,
+    "fname": "Ram",
+    "lname": "Mohan",
+    "dob": "11/12/1991",
+    "email": "ramm@hotmail.com",
+    "password": "iamexcellent3",
+    "user_name": "Ramm"
+  },
+  {
+    "user_id": 4,
+    "fname": "Marcus",
+    "lname": "Malliaté",
+    "dob": "07/10/1991",
+    "email": "marcusm@hotmail.com",
+    "password": "iamabraverabbit4",
+    "user_name": "MarcusM"
+  },
+  {
+    "user_id": 5,
+    "fname": "Wagner",
+    "lname": "Lopez",
+    "dob": "27/11/1993",
+    "email": "wagnerl@hotmail.com",
+    "password": "iamverysmart1",
+    "user_name": "WagnerL"
+  },
+  {
+    "user_id": 6,
+    "fname": "Ben",
+    "lname": "Fawcett",
+    "dob": "15/11/1994",
+    "email": "benf@hotmail.com",
+    "password": "iamalsoverysmart1",
+    "user_name": "BenF"
   }
 ]
+
