@@ -1,3 +1,11 @@
-<h1>book</h1>
-{{book.name}}
-{{review.review_text}}
+<h1>The book of the month - December 2021</h1>
+<p>Book Name: {{book.name}}</p>
+<p>Author: {{book.author}}</p>
+<p>Publishing Year: {{book.year}}</p>
+<p>Date Posted: {{book.date_posted}}</p>
+<p>Synopsis: {{book.synopsis}}</p>
+{{#each book.reviews as | review |}}
+
+<p>{{review.review_text}}</p>
+
+{{/each}}
