@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Book, User, Review } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -33,16 +33,33 @@ router.get('/book/:id', async (req, res) => {
 // Use withAuth middleware to prevent access to route
 router.get('/book', withAuth, async (req, res) => {
   try {
-    // // Find the logged in user based on the session ID
-    // const userData = await User.findByPk(req.session.user_id, {
-    //   attributes: { exclude: ['password'] },
-    //   include: [{ model: Book }],
-    // });
+    // Find the logged in user based on the session ID
+    const bookData = await Book.findByPk(1, {
+      // include: [{ model: Book }], Change to reviews
+    });
 
-    // const user = userData.get({ plain: true });
-    // console.log(user)
+    const book = bookData.get({ plain: true });
+    // console.log(book)
     res.render('book', {
-      // ...user,
+      book,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/review', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const reviewData = await Review.findByPk(1, {
+      // include: [{ model: Book }], Change to reviews
+    });
+
+    const review = reviewData.get({ plain: true });
+    console.log(review)
+    res.render('review', {
+      review,
       logged_in: true
     });
   } catch (err) {
@@ -53,7 +70,7 @@ router.get('/book', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/profile');
+    res.redirect('/book');
     return;
   }
 
