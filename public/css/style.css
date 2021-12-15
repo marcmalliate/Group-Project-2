@@ -10,6 +10,7 @@ header, .project:not(:last-child) {
   color: #1b89bc;
   text-decoration: none;
   font-size: 100%;
+  padding-right: 10px;
 }
 
 .no-button:hover {
@@ -17,8 +18,71 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
+.app-title {
   font-weight: bold;
-  margin-left: -5px;
+  font-style: italic;
+  text-decoration: none;
+  color: black;
+  padding-left: 10px;
+  
+}
+
+.app-title:hover {
+  text-decoration: none;
+  color: #366f9b;
+}
+
+.app-brief {
+  text-align: center;
+}
+
+.tagline {
+  font-style: italic;
+  padding-bottom: 10px;
+}
+
+.tagline-2 {
+  padding-bottom: 40px;
+}
+
+.book-title {
+  padding-top: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.subtitle {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.book-cover {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.purchase-link {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+.purchase-link:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.user-reviews {
+  padding-top: 80px;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .book-cover {
+    width: 20%;
+    height: 20%;
+  }
+
 }

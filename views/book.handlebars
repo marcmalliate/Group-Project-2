@@ -1,11 +1,16 @@
-<h1>The book of the month - December 2021</h1>
-<p>Book Name: {{book.name}}</p>
-<p>Author: {{book.author}}</p>
-<p>Publishing Year: {{book.year}}</p>
-<p>Date Posted: {{book.date_posted}}</p>
-<p>Synopsis: {{book.synopsis}}</p>
+<h1>December 2021</h1>
+<hr>
+<img class="book-cover" src="{{book.img_url}}"/>
+<h2 class="book-title">{{book.name}} - {{book.year}}</h2>
+<p class="text-center"><span class="subtitle">Author:</span> {{book.author}}</p>
+<p class="text-center"><span class="subtitle">Synopsis:</span> {{book.synopsis}}</p>
+<p class="text-center"><a class="purchase-link" href="{{book.purchase_link}}">Purchase here!</a></p>
+
+
+
+<p class="text-center user-reviews"><span class="subtitle">User Reviews:</span></p>
 {{#each book.reviews as | review |}}
 
-<p>{{review.review_text}}</p>
+<p class="text-center">{{review.review_text}}</p>
 
 {{/each}}
