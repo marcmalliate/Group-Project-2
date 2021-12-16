@@ -27,10 +27,10 @@ Book.init(
       allowNull: false,
       // defaultValue: DataTypes.NOW,
     },
-    // img_url: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
+   img_url: {
+       type: DataTypes.STRING,
+      allowNull: false,
+   },
     synopsis: {
       type: DataTypes.TEXT,
       allowNull: false,
