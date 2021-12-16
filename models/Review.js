@@ -34,7 +34,7 @@ Review.init(
     },
     reviewed_date: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       // defaultValue: DataTypes.NOW,
     },
   },
