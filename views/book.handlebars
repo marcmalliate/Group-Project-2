@@ -4,49 +4,34 @@
 <p>Publishing Year: {{book.year}}</p>
 <p>Date Posted: {{book.date_posted}}</p>
 <p>Synopsis: {{book.synopsis}}</p>
+<div>
+  <p>Add reviews:</p>
+<form class="form new-review-form">
+      
+      <div class="form-group">
+        <label for="review-desc">description:</label>
+        <textarea class="form-input" id="review-desc" name="review-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+    </div>
 
+
+
+
+{{#if book.reviews.length}}
+<div class="review-list"></div>
 {{#each book.reviews as | review |}}
 
-<p>{{review.review_text}} {{user.name}}</p>
 
+<p>{{review.review_text}}</p>
+<p>Added by: {{user.name}}</p>
 
 {{/each}}
-
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Add Review
-</button>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Review</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        {{!-- <p>Modal body text goes here.</p> --}}
-        <div class="form-group">
-      <label for="exampleSelect1" class="form-label mt-4">Rating</label>
-      <select class="form-select" id="exampleSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-      <div class="form-group">
-      <label for="exampleTextarea" class="form-label mt-4">Review comments</label>
-      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-    </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
 </div>
+{{/if}}
 
 
 

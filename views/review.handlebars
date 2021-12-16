@@ -1,4 +1,9 @@
-<h1>Review</h1>
-{{review.review_text}}
-{{review.rating}}
-{{user.name}}
+<div class="review-list"></div>
+{{#each reviews as | review |}}
+
+
+<p>{{review_text}}</p>
+<p>Added by: {{user.name}}</p>
+
+{{/each}}
+</div>
