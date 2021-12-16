@@ -3,6 +3,7 @@ const newFormHandler = async (event) => {
   
     // const name = document.querySelector('#project-name').value.trim();
     // const needed_funding = document.querySelector('#project-funding').value.trim();
+    
     const review_text = document.querySelector('#review-desc').value.trim();
   
     if (review_text) {
@@ -24,14 +25,14 @@ const newFormHandler = async (event) => {
   
   const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
+      const review_id = event.target.getAttribute('data-id');
   
-      const response = await fetch(`/api/reviews/${id}`, {
+      const response = await fetch(`/api/reviews/${review_id}`, {
         method: 'DELETE',
       });
   
       if (response.ok) {
-        document.location.replace('/reviews');
+        document.location.replace('/book');
       } else {
         alert('Failed to delete review');
       }

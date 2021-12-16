@@ -22,3 +22,58 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+.review-list{
+background-color:rgb(233, 204, 204);
+padding: 10px;
+margin:10px;
+}
+
+/* CSS from Madelene */
+
+.app-title {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+  color: black;
+  padding-left: 10px;
+}
+.app-title:hover {
+  text-decoration: none;
+  color: #366F9B;
+}
+
+.book-title {
+  padding-top: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+.subtitle {
+  font-style: italic;
+  font-weight: bold;
+}
+.book-cover {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.purchase-link {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+.purchase-link:hover {
+  text-decoration: underline;
+  color: black;
+}
+.user-reviews {
+  padding-top: 80px;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .book-cover {
+    width: 20%;
+    height: 20%;
+  }
+}

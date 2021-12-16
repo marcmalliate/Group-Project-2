@@ -9,18 +9,18 @@ router.post('/', withAuth, async (req, res) => {
       user_id: req.session.user_id,
       book_id: 1,
     });
-
+console.log(newReview)
     res.status(200).json(newReview);
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:review_id', withAuth, async (req, res) => {
   try {
     const reviewData = await Review.destroy({
       where: {
-        id: req.params.id,
+        review_id: req.params.review_id,
         user_id: req.session.user_id,
       },
     });
