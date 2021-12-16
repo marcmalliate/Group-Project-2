@@ -30,7 +30,7 @@ Review.init(
       allowNull: true,
     },
     rating: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
     },
     reviewed_date: {
       type: DataTypes.STRING,

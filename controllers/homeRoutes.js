@@ -37,6 +37,7 @@ router.get('/book', withAuth, async (req, res) => {
     const bookData = await Book.findByPk(1, {
       include: [
         {
+          include:[{ model:User }],
         model: Review,
         }
       ]

@@ -4,7 +4,7 @@
       "user_id": 1,
       "book_id": 1,
       "review_text": "The book is really good!",
-      "rating": "4/5",
+      "rating": 4,
       "reviewed_date": "13/12/2021"
     },
     {
