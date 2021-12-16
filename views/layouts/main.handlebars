@@ -9,42 +9,23 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Staatliches&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Satisfy&family=Source+Sans+Pro:wght@300&family=Staatliches&display=swap"
+    rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/package.json">
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/homepage.css">
+  <link rel="stylesheet" href="/css/loginpage.css">
   <title>The book was better</title>
 
 </head>
 
 <body>
 
-  {{!-- <header class="display-flex justify-space-between align-center p-2">
-    {{!-- <h1>
-      <span role="img" aria-label="money">💸</span>
-      <a href="/">Fund My Project!</a>
-    </h1> --}}
-    {{!-- <nav>
-      <!-- Conditionally render login or logout links -->
-      {{#if logged_in}}
-      <a href="/profile">profile</a> |
-      <button class="no-button" id="logout">logout</button>
-      {{else}}
-      <a href="/login">login</a>
-      {{/if}}
-    </nav> --}}
-    {{!-- </header> --}}
-  {{!-- <div class="profile">
-    <!-- Conditionally render login or logout links -->
-    {{#if logged_in}}
-    <a href="/profile">profile</a> |
-    <button class="no-button" id="logout">logout</button>
-    {{else}}
-    <a href="/login">login</a>
-    {{/if}}
-  </div> --}}
   <header>
     <div class="container-fluid row topcard ">
       <div class="col-8 justify-content-center ">
@@ -69,21 +50,20 @@
           <p class="subtitle">the online book club for books that have been adapted to film</p>
           <div class="row">
             <div class="col">
-              <button class="login">login</button>
-              <button class="signup">Signup</button>
+
+              <button href="/login" class="login">login</button>
+              {{!--
+              {{else}}
+              <button href="/login" style="color:rgb(60, 179, 113)">login</button> --}}
+              {{!-- <button class="no-button signup" id="logout">logout</button> --}}
+
+              {{!-- <button class="login">login</button>
+              <button class="signup">Signup</button> --}}
             </div>
           </div>
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
 
     {{{ body }}}
   </main>
