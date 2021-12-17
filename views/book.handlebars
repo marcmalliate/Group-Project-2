@@ -1,66 +1,53 @@
-<h1>December 2021</h1>
-<hr />
-<img class='book-cover' src='{{book.img_url}}' />
-<h2 class='book-title'>{{book.name}} - {{book.year}}</h2>
-<p class='text-center'><span class='subtitle'>Author:</span> {{book.author}}</p>
-<p class='text-center'><span class='subtitle'>Synopsis:</span>
-  {{book.synopsis}}</p>
-<p class='text-center'><a
-    class='purchase-link'
-    href='{{book.purchase_link}}'
-  >Purchase here!</a></p>
-
-
-
-
 <div>
-  <p><b>Add reviews:</b></p>
-  <form class='new-review-form'>
-    <fieldset>
-      <div class="form-group">
-          <label for="review-desc" class="form-label mt-4">Description:</label>
-          <textarea class="form-control" id="review-desc" name='review-desc' rows="3"></textarea>
-      </div>  
+  <div>
+    <h1>December 2021</h1>
+    <hr />
+    <img class='book-cover' src='{{book.img_url}}' />
+    <h2 class='book-title'>{{book.name}} - {{book.year}}</h2>
+    <p class='text-center'><span class='subtitle'>Author:</span>{{book.author}}</p>
+    <p class='text-center'><span class='subtitle'>Synopsis:</span>{{book.synopsis}}</p>
+    <p class='text-center'><a href="{{book.purchase_link}}", target="_blank">Purchase Here</a></p>
+  </div>
+  <div>
+    <p><b>Add reviews:</b></p>
+    <form class='new-review-form'>
+      <fieldset>
+        <div class='form-group'>
+          <label for='review-desc' class='form-label mt-4'>Description:</label>
+          <textarea class='form-control' id='review-desc' name='review-desc' rows='3'></textarea>
+        </div>
 
-      
+        <div class='form-group'>
+          <label for='review-rating'>Rate the book (Choose rating between 1-5):</label>
+          <input type='number' min='1' max='5' class='form-control' id='review-rating' style="width:100px;"/>
+        </div>
 
-     
-      <div class="form-group form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="review-rating" id="review-rating" value="1">
-          1
-        </label>
-      </div>
-      <div class="form-group form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="review-rating" id="review-rating" value="2">
-          2
-        </label>
-      </div>
+        <div class='form-group'>
+          <button type='submit' class='btn btn-primary'>Create</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
 
-     
-    
-
-      <div class="form-group">
-          <button type="submit" class="btn btn-primary">Create</button>
-      </div>      
-    </fieldset>
-  </form>
-</div>
-
-
-{{#if book.reviews.length}}
-
-  {{#each book.reviews as |review|}}
-
+  {{#if book.reviews.length}}
     <div class='review-list'>
-      <p><b>Description: </b>{{review.review_text}}</p>
-      <p><b>Rating: </b>{{review.rating}}</p>
-      <p>Added by: {{review.user.name}}</p>
-      <button class='btn btn-sm btn-danger' data-id='{{review.review_id}}'>DELETE</button>
-    </div>
-  {{/each}}
+      <h3>Current Reviews:</h3>
+      {{#each book.reviews as |review|}}
 
-{{/if}}
+        <div class='row mb-2 review-styling'>
+          <div class='col-md-8'>
+            <p><b>Description: </b>{{review.review_text}}</p>
+            <p><b>Rating: </b>{{review.rating}}</p>
+            <p>Added by: {{review.user.name}}</p>
+          </div>
+          <div class='col-md-4'>
+            <button class='btn btn-sm btn-danger' data-id='{{review.review_id}}'>DELETE</button>
+          </div>
+        </div>
+
+      {{/each}}
+    </div>
+  {{/if}}
+</div>
 
 <script src='./js/review.js'></script>
