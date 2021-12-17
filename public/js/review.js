@@ -2,9 +2,10 @@ const newFormHandler = async (event) => {
     event.preventDefault();
   
     // const name = document.querySelector('#project-name').value.trim();
-    // const needed_funding = document.querySelector('#project-funding').value.trim();
     
+    // const rating = document.getElementById("#review-rating").value;    
     const review_text = document.querySelector('#review-desc').value.trim();
+
   
     if (review_text) {
       const response = await fetch(`/api/reviews`, {
@@ -14,7 +15,7 @@ const newFormHandler = async (event) => {
           'Content-Type': 'application/json',
         },
       });
-  console.log(review_text)
+  
       if (response.ok) {
         document.location.replace('/book');
       } else {
@@ -46,4 +47,6 @@ const newFormHandler = async (event) => {
   document
     .querySelector('.review-list')
     .addEventListener('click', delButtonHandler);
+
+    console.log(rating)
   
