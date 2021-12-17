@@ -1,7 +1,24 @@
-{{#each book.reviews as | review |}}
 
-
-<p>{{review.review_text}}</p>
-<p>Added by: {{user.name}}</p>
-
-{{/each}}
+<div class="col-8 justify-content-center ">
+  <img src="./assets/logo.png" class="img-fluid logo" alt="..."><img>
+</div>
+  <div class="container-fluid banner ">
+    <div class=" row  bannercard">
+      <div class="col">
+        <p class="title">The <span>book</span> was better</p>
+        <p class="subtitle">the online book club for books that have been adapted to film</p>
+        <div class="row">
+          <div class="col">
+            <div >
+              {{#if logged_in}}
+              <a href="/profile">Profile</a> |
+              <button class="no-button buttons style="id="logout">logout</button>
+              {{else}}
+              <a  href="/login" class ="buttons buttontext">login/Register</a>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

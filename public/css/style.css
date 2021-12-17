@@ -17,11 +17,7 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
-}
+
 
 .review-styling{
 background-color:rgb(233, 204, 204);
@@ -29,8 +25,12 @@ padding: 10px;
 margin:10px;
 }
 
-/* CSS from Madelene */
-
+/* CSS from Madelene
+.dollar-amount {
+  color: #056605;
+  font-weight: bold;
+  margin-left: -5px;
+}
 .app-title {
   font-weight: bold;
   font-style: italic;
@@ -71,9 +71,9 @@ margin:10px;
   padding-top: 80px;
 }
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .book-cover {
     width: 20%;
     height: 20%;
   }
-}
+} */ 
