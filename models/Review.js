@@ -26,7 +26,7 @@ Review.init(
       },
     },
     review_text: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: true,
     },
     rating: {
@@ -34,7 +34,7 @@ Review.init(
     },
     reviewed_date: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       // defaultValue: DataTypes.NOW,
     },
   },
