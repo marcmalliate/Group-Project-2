@@ -31,6 +31,10 @@ Book.init(
        type: DataTypes.STRING,
       allowNull: false,
    },
+   purchase_link: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+   },
     synopsis: {
       type: DataTypes.TEXT,
       allowNull: false,
