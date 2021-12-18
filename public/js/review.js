@@ -3,7 +3,13 @@ const newFormHandler = async (event) => {
   
     // const name = document.querySelector('#project-name').value.trim();
     
-    const rating = document.querySelector('#review-rating').value.trim();   
+    // const rating = document.querySelector('#review-rating').value.trim();   
+
+    
+    const rating = document.querySelector('input[name="review-rating"]:checked').value;  
+    
+
+
     const review_text = document.querySelector('#review-desc').value.trim();
 
   
