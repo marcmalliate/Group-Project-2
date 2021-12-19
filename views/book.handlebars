@@ -1,7 +1,7 @@
 <header class=" topcolor">
   <div class="container row  profilebuttons">
     <div class="col-6 ">
-      <a href="/"><img src="./images/Braverabbits.png" class="img-fluid logoh" alt="..."><img> THE BOOK WAS BETTER </a>
+      <a class ="headdingtitle" href="/"><img src="./images/Braverabbits.png" class="img-fluid logoh" alt="..."><img> THE BOOK WAS BETTER </a>
     </div>
     <div class="col-6 loginbuttons ">
       {{#if logged_in}}
@@ -33,7 +33,7 @@
         <form class='new-review-form'>
           <fieldset>
             <div class='form-group'>
-              <label for='review-desc' class='form-label mt-4'>Description:</label>
+              <label for='review-desc' class='form-label mt-4 textsize'>Description:</label>
               <textarea class='form-control' id='review-desc' name='review-desc' rows='3'></textarea>
             </div>
 
@@ -44,7 +44,7 @@
 
             <div class='form-group'>
               <div class="stars">
-                <p>Rate the book (Choose rating between 1-5):</p>
+                <p>Rate the book</p>
                 <form action="" class="formstar">
                   <input class="star star-5" id="star-5-2" type="radio" name="review-rating" value="5"/>
                   <label class="star star-5" for="star-5-2"></label>
@@ -61,7 +61,7 @@
             </div>
 
             <div class='form-group'>
-              <button type='submit' class='btn btn-primary'>Create</button>
+              <button type='submit' class='btn btncolorcreate'>Create</button>
             </div>
           </fieldset>
         </form>
@@ -70,16 +70,14 @@
       <div>
         {{#if book.reviews.length}}
         <div class='review-list'>
-          <h3>Current Reviews:</h3>
+          <p class="textsize">Current Reviews:</p>
           {{#each book.reviews as |review|}}
           <div class='row mb-2 review-styling'>
             <div class='col-md-8'>
-              <p><b>Description: </b>{{review.review_text}}</p>
-              <p><b>Rating: </b>{{review.rating}}</p>
-              <p>Added by: {{review.user.name}}</p>
-            </div>
-            <div class='col-md-4'>
-              <button class='btn btn-sm btn-danger' data-id='{{review.review_id}}'>DELETE</button>
+              <p class="textsize1"><b>Description: </b>{{review.review_text}}</p>
+              <p class="textsize1"><b>Rating: </b>{{review.rating}}</p>
+              <p class="textsize1">Added by: {{review.user.name}}</p>
+              <button class='btn btn-sm btncolor' data-id='{{review.review_id}}'> <i class="fas fa-trash icon"></i>DELETE</button>
             </div>
           </div>
 
