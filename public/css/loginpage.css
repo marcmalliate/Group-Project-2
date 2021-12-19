@@ -6,7 +6,7 @@ html {
     
     top: 0; */
 
-    /* background-color:black; */
+
 }
 
 .loginpage {
@@ -14,37 +14,43 @@ html {
     margin: 0 auto;
     border-radius: 10px;
     /* margin-top: 10px; */
-    box-shadow: rgba(168, 168, 168, 0.63) 0px 0px 16px; 
+    box-shadow: rgba(168, 168, 168, 0.63) 0px 0px 16px;
     color: rgb(223, 215, 215);
     width: 50%;
     position: relative;
     top: -40px;
-    
+
 }
-.titleform{
-    padding:20px;
+
+.titleform {
+    padding: 20px;
     font-size: 25px;
 
 }
-.signup{
 
-    border-left:2px solid rgb(223, 215, 215);
-    
+.signup {
+
+    border-left: 2px solid rgb(223, 215, 215);
+
 
 }
-.signup,.login{
+
+.signup,
+.login {
 
     font-family: 'Mohave', sans-serif;
 }
-.signup-form{
-    padding-left:10px;
-}
-.formfeild{
-height:5vh;
+
+.signup-form {
+    padding-left: 10px;
 }
 
-input:focus{
-    background-color:rgb(182, 248, 223);
+.formfeild {
+    height: 5vh;
+}
+
+input:focus {
+    background-color: rgb(182, 248, 223);
 
 }
 
@@ -57,15 +63,71 @@ input:focus{
     background-color: #1c4d4d;
     text-align: center;
     cursor: pointer;
-    border-radius:5px;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    
-    font-size:20px;
-   
+    font-size: 20px;
+
+
+}
+
+.buttons:hover {
+    background-color: rgb(182, 248, 223);
+    color: rgb(77, 67, 67);
+
+}
+.logo{
     
 }
-.buttons:hover {
-    background-color:rgb(182, 248, 223);
-    color: rgb(77, 67, 67);
-   
+
+
+@media (min-width: 320px) and (max-width: 600px) {
+
+    .buttons {
+
+        padding: 10px 10px;
+        font-size: 15px;
+
+
+    }
+
+    .signup {
+
+        border-left: 0px solid rgb(223, 215, 215);
+
+
+    }
+
+    .loginpage {
+        width: 90%;
+    }
+
+    .signup,
+    .login {
+
+        font-family: 'Mohave', sans-serif;
+        width: 200px;
+    }
+
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .buttons {
+
+        padding: 15px 30px;
+        font-size: 15px;
+
+
+    }
+
+    .loginpage {
+        width: 90%;
+    }
+
+    .signup,
+    .login {
+
+        font-family: 'Mohave', sans-serif;
+        width: 90%;
+    }
 }
