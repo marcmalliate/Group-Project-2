@@ -18,7 +18,7 @@ html {
     color: rgb(223, 215, 215);
     width: 50%;
     position: relative;
-    top: -40px;
+    top: 100px;
 
 }
 
@@ -28,12 +28,7 @@ html {
 
 }
 
-.signup {
 
-    border-left: 2px solid rgb(223, 215, 215);
-
-
-}
 
 .signup,
 .login {
@@ -75,9 +70,7 @@ input:focus {
     color: rgb(77, 67, 67);
 
 }
-.logo{
-    
-}
+
 
 
 @media (min-width: 320px) and (max-width: 600px) {
@@ -105,7 +98,7 @@ input:focus {
     .login {
 
         font-family: 'Mohave', sans-serif;
-        width: 200px;
+        /*width: 200px; */
     }
 
 }

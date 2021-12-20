@@ -1,0 +1,197 @@
+diff --git a/public/css/homepage.css b/public/css/homepage.css
+index 2adbb25..8de6f0b 100644
+--- a/public/css/homepage.css
++++ b/public/css/homepage.css
+@@ -28,6 +28,13 @@ header {
+ 
+ }
+ 
++.logo {
++    align-items: center;
++    height: 20px;
++    width: 20px;
++
++}
++
+ 
+ 
+ .buttons {
+@@ -50,17 +57,14 @@ header {
+ 
+ .login,
+ .signup {
+-    margin-right: 40px;
++    /*margin-right: 40px;*/
+     font-size: 30px;
+     font-family: 'Staatliches', cursive;
+ 
+ 
+ }
+ 
+-.signup {
+-    margin-left: 40px;
+ 
+-}
+ 
+ 
+ .profile:hover {
+@@ -122,12 +126,12 @@ header {
+ 
+ 
+     }
+-    .logo{
++    /*.logo{
+         display: flex;
+         justify-content: center;
+         position: relative;
+         
+-    }
++    } */
+ 
+ 
+ 
+diff --git a/public/css/loginpage.css b/public/css/loginpage.css
+index 759dc2e..b357a22 100644
+--- a/public/css/loginpage.css
++++ b/public/css/loginpage.css
+@@ -11,7 +11,7 @@ html {
+ 
+ .loginpage {
+     background-color: #1c4141;
+-    margin: 0 auto;
++    /*margin: 0 auto;*/
+     border-radius: 10px;
+     /* margin-top: 10px; */
+     box-shadow: rgba(168, 168, 168, 0.63) 0px 0px 16px;
+@@ -28,12 +28,7 @@ html {
+ 
+ }
+ 
+-.signup {
+ 
+-    border-left: 2px solid rgb(223, 215, 215);
+-
+-
+-}
+ 
+ .signup,
+ .login {
+@@ -75,9 +70,7 @@ input:focus {
+     color: rgb(77, 67, 67);
+ 
+ }
+-.logo{
+-    
+-}
++
+ 
+ 
+ @media (min-width: 320px) and (max-width: 600px) {
+@@ -105,7 +98,7 @@ input:focus {
+     .login {
+ 
+         font-family: 'Mohave', sans-serif;
+-        width: 200px;
++        /*width: 200px; */
+     }
+ 
+ }
+diff --git a/views/book.handlebars b/views/book.handlebars
+index 03dcf44..2a18248 100644
+--- a/views/book.handlebars
++++ b/views/book.handlebars
+@@ -1,14 +1,14 @@
+ <header class=" topcolor">
+   <div class="container row  profilebuttons">
+     <div class="col-6 ">
+-      <a class ="headdingtitle" href="/"><img src="./images/Braverabbits.png" class="img-fluid logoh" alt="..."><img> THE BOOK WAS BETTER </a>
++      <a class ="headdingtitle" href="/"> THE BOOK WAS BETTER </a>
+     </div>
+     <div class="col-6 loginbuttons ">
+       {{#if logged_in}}
+-      <a href="/profile" class="buttons buttontext">Profile</a> |
+-      <button class="no-button buttons style=" id="logout">logout</button>
++      <a href="/profile" class="buttons buttontext">Profile</a> 
++      <button class="no-button buttons style=" id="logout">Logout</button>
+       {{else}}
+-      <a href="/login" class="buttons buttontext">login/Register</a>
++      <a href="/login" class="buttons buttontext">Login/Register</a>
+       {{/if}}
+     </div>
+   </div>
+diff --git a/views/homepage.handlebars b/views/homepage.handlebars
+index db4fde5..04f4036 100644
+--- a/views/homepage.handlebars
++++ b/views/homepage.handlebars
+@@ -4,25 +4,26 @@
+ </div>
+ 
+ <div class="row">
+-  <img src="./images/Braverabbits.png" class="img-fluid logo" alt="..."><img>
++  
+ </div>
+ <div class="container-fluid   banner ">
+   <div class=" row bannercard">
+     <div class="col">
+         <p class="title">The <span class="textpart">book</span> was better</p>
+-        <p class="subtitle">the online book club for books that have been adapted to film</p>
++        <p class="subtitle">The online book club for books that have been adapted to film!</p>
+         <div class="row">
+           <div class="col">
+             <div >
+               {{#if logged_in}}
+               <a href="/profile" class="buttons buttontext">Profile</a> 
+-              <button class="no-button buttons"  id="logout">logout</button>
++              <button class="no-button buttons"  id="logout">Logout</button>
+               {{else}}
+-              <a  href="/login" class ="buttons buttontext">login/Register</a>
++              <a  href="/login" class ="buttons buttontext">Login/Register</a>
+               {{/if}}
+             </div>
+           </div>
+         </div>
++        <img src="./images/Braverabbitssmalllogo.png" class="img-fluid logo" alt="..."><img>
+     </div>
+   </div>
+ </div>
+\ No newline at end of file
+diff --git a/views/login.handlebars b/views/login.handlebars
+index 59ca131..0d4b120 100644
+--- a/views/login.handlebars
++++ b/views/login.handlebars
+@@ -6,7 +6,7 @@
+   <img src="./images/Braverabbits.png" class="img-fluid logo" alt="..."><img>
+ </div>
+ <div class="container row justify-content-center loginpage">
+-  <div class="col-md-5 login" >
++  <div class="col-12 col-lg-6 login" >
+     <p class="titleform">Login</p>
+     <div class="col-md-6"></div>
+     <form class="form login-form">
+@@ -23,7 +23,7 @@
+       </div>
+     </form>
+   </div>
+-  <div class="col-md-5 signup ">
++  <div class="col-12 col-lg-6 signup ">
+     <p class="titleform">Signup</p>
+     <form class="form signup-form ">
+       <div class="form-group">
+diff --git a/views/profile.handlebars b/views/profile.handlebars
+index 58f4308..5e75e4b 100644
+--- a/views/profile.handlebars
++++ b/views/profile.handlebars
+@@ -1,11 +1,11 @@
+ <header class=" topcolor">
+   <div class="container row  profilebuttons">
+     <div class="col-6 ">
+-      <a class ="headdingtitle" href="/"><img src="./images/Braverabbits.png" class="img-fluid logoh" alt="..."><img> THE BOOK WAS BETTER </a>
++      <a class ="headdingtitle" href="/"> THE BOOK WAS BETTER </a>
+     </div>
+     <div class="col-6 loginbuttons ">
+       {{#if logged_in}}
+-      <a href="/book" class="buttons buttontext">Book</a> |
++      <a href="/book" class="buttons buttontext">Book</a>
+       <button class="no-button buttons style=" id="logout">logout</button>      
+       {{else}}
+       <a href="/login" class="buttons buttontext">login/Register</a>

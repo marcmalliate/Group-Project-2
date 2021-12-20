@@ -28,6 +28,13 @@ header {
 
 }
 
+.logo {
+    align-items: left;
+    height: 10px;
+    width: 10px;
+
+}
+
 
 
 .buttons {
@@ -50,17 +57,14 @@ header {
 
 .login,
 .signup {
-    margin-right: 40px;
+    /*margin-right: 40px;*/
     font-size: 30px;
     font-family: 'Staatliches', cursive;
 
 
 }
 
-.signup {
-    margin-left: 40px;
 
-}
 
 
 .profile:hover {
@@ -122,12 +126,12 @@ header {
 
 
     }
-    .logo{
+    /*.logo{
         display: flex;
         justify-content: center;
         position: relative;
         
-    }
+    } */
 
 
 
