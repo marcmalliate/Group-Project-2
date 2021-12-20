@@ -31,12 +31,15 @@ Our book club has been deployed on Heroku   ->   https://the-book-was-better-boo
 
 Below is the login/register page:
 
-![login page](./public/images/loginpage.png)
+![login page](./public/images/homepage.png)
 
 
 And below is the main book of the month page:
 
-![main book page](./public/images/mainbookpage.png)
+![main book page](./public/images/bookpage.png)
+
+And here is a brief walkthrough of the website!
+![walkthrough](./public/images/TheBookWasBetter.gif)
 
 
 # Future Developments
