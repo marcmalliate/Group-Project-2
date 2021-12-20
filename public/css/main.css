@@ -1,3 +1,11 @@
+body,
+html {
+    /* height: 100%; */
+    margin: 0;
+    font-family: 'Mohave', sans-serif;
+    top: 0;
+    box-sizing: border-box;
+}
 .banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/booksmovies.png");
     background-position: center;
@@ -12,14 +20,58 @@
 }
 
 .logo {
-    height: 200px;
+    height: 170px;
     width: 200px;
     position: relative;
-    left: 20%;
-    margin-top:3%;
-    
+    top: 60px;
+    left: 60px; 
 
 }
 body{
 background-color:rgb(223, 215, 215);
+}
+
+@media (min-width: 200px) and (max-width: 600px) {
+
+    .logo {
+       height: 100px;
+       width: 130px;
+       margin: 40% auto;
+       position: relative;
+       left: 10px;
+
+    }
+
+}
+@media (min-width: 601px) and (max-width: 769px) {
+
+    .logo {
+    
+        height: 100px;
+        width: 120px;
+        margin: 25% auto;
+         position: relative;
+         left: 10px;
+     ;
+
+      
+
+    }
+
+
+} 
+@media (min-width: 770px) and (max-width: 1024px) {
+
+    .logo {
+
+        height: 120px;
+        width: 150px;
+        margin: 15% auto;
+        position: relative;
+        left: 10px;
+
+
+    }
+
+
 }

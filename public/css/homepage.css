@@ -1,11 +1,3 @@
-body,
-html {
-    /* height: 100%; */
-    margin: 0;
-    font-family: 'Mohave', sans-serif;
-    top: 0;
-}
-
 header {
     z-index: 1;
     border: 0px solid black;
@@ -21,16 +13,19 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(223, 215, 215);;
+    color: rgb(223, 215, 215);
+    ;
     background-color: rgb(28, 65, 65);
     background-size: fill;
     padding: 70px;
     border-radius: 20px;
+    width: 60%;
 }
 
 .buttontext {
     color: rgb(223, 215, 215);
     text-decoration: none;
+
 }
 
 
@@ -41,8 +36,7 @@ header {
     background-color: #1c4d4d;
     text-align: center;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 30px;
+    border-radius: 100px;
     box-shadow: rgba(59, 59, 59, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
 }
@@ -50,6 +44,7 @@ header {
 .buttons:hover {
     background-color: rgb(182, 248, 223);
     color: rgb(77, 67, 67);
+
 
 }
 
@@ -76,14 +71,15 @@ header {
 
 .title {
     font-family: 'Staatliches', cursive;
-    color: rgb(223, 215, 215);;
+    color: rgb(223, 215, 215);
     font-size: 100px;
 
 }
 
 .subtitle {
     font-family: 'Satisfy', cursive;
-    color: rgb(223, 215, 215);;
+    color: rgb(223, 215, 215);
+    ;
     font-size: 25px;
     position: relative;
     top: -30px;
@@ -96,12 +92,104 @@ header {
     color: rgb(235, 186, 25);
 }
 
+@media (min-width: 320px) and (max-width: 600px) {
 
-/* 
-  
-  
-  
-  
 
-  
-   */
+    .title {
+        font-family: 'Staatliches', cursive;
+        color: rgb(223, 215, 215);
+        ;
+        font-size: 20px;
+        margin-top: 10px;
+
+    }
+
+    .subtitle {
+        font-family: 'Satisfy', cursive;
+        color: rgb(223, 215, 215);
+        ;
+        font-size: 15px;
+        position: relative;
+        top: -10px;
+
+    }
+
+    .bannercard {
+
+        padding: 20px;
+        margin: 0 auto;
+        width: 90%;
+
+
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        
+    }
+
+
+
+
+}
+
+@media (min-width: 601px) and (max-width:769px) {
+
+    .title {
+        font-family: 'Staatliches', cursive;
+        color: rgb(223, 215, 215);
+        ;
+        font-size: 50px;
+        margin-top: 10px;
+
+    }
+
+    .subtitle {
+        font-family: 'Satisfy', cursive;
+        color: rgb(223, 215, 215);
+        ;
+        font-size: 15px;
+        position: relative;
+        top: -10px;
+
+    }
+
+    .bannercard {
+
+        padding: 10px;
+        margin: 0 auto;
+
+    }
+
+}
+
+@media (min-width: 770px) and (max-width:1024px) {
+
+    .title {
+        font-family: 'Staatliches', cursive;
+        color: rgb(223, 215, 215);
+        ;
+        font-size: 70px;
+        margin-top: 10px;
+
+    }
+
+    .subtitle {
+        font-family: 'Satisfy', cursive;
+        color: rgb(223, 215, 215);
+        ;
+        font-size: 15px;
+        position: relative;
+        top: -10px;
+
+    }
+
+    .bannercard {
+
+        padding: 10px;
+        margin: 0 auto;
+
+    }
+
+}
