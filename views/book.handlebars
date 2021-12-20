@@ -1,13 +1,12 @@
 <header class="topcolor">
   <div class="container row  profilebuttons">
-    <div class="col-9 col-sm ">
-      <a href="/"><img src="./images/Braverabbits.png" class="img-fluid logoh" alt="..."><img></a><a class ="headdingtitle" href="/">THE BOOK WAS BETTER</a>
+    <div class="col-6 ">
+      <a class ="headdingtitle" href="/"> THE BOOK WAS BETTER </a>
     </div>
-
-    <div class="col-3 loginbuttons ">
+    <div class="col-6 loginbuttons ">
       {{#if logged_in}}
-      <a href="/profile" class="buttons buttontext">Profile</a>
-      <button class="no-button buttons" id="logout">Logout</button>
+      <a href="/profile" class="buttons buttontext">Profile</a> 
+      <button class="no-button buttons style=" id="logout">Logout</button>      
       {{else}}
       <a href="/login" class="buttons buttontext">Login / Register</a>
       {{/if}}
